@@ -20,6 +20,7 @@ export default function process() {
       let video = resolveVideoUrl(url);
       if(video) {
         video.muted = el.getAttribute('data-muted') ? 1 : 0;
+        video.mutedAtMobile = el.getAttribute('data-muted-at-mobile') ? 1 : 0;
         window[video.type] = video;
         paintVideo(el, video);
         addListeners(el, video);

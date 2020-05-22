@@ -6,11 +6,20 @@ let map = {
 };
 
 export default function addIframe(el, video) {
-  if(map[video.type]) {
+  if (map[video.type]) {
     let params = '';
-    if(video.muted) {
+
+    if (video.muted) {
       params += '&muted=1';
     }
+
+    if (video.mutedAtMobile) {
+      if (Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) < 767) {
+        params += '&muted=1';
+      }
+    }
+
+
     el.appendChild(getIframe(map[video.type].replace('{id}', video.id).replace('{params}', params)));
     el.iframedInnerHTML = el.innerHTML;
   }
