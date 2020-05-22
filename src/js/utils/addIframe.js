@@ -1,8 +1,8 @@
 import getIframe from './getIframe';
 
 let map = {
-  youtube: 'https://www.youtube.com/embed/{id}?autoplay=1&playsinline=1&muted=1',
-  vimeo: 'https://player.vimeo.com/video/{id}?autoplay=1&playsinline=true&muted=true'
+  youtube: 'https://www.youtube.com/embed/{id}?autoplay=1&playsinline=1',
+  vimeo: 'https://player.vimeo.com/video/{id}?autoplay=1&playsinline=true'
 };
 
 export default function addIframe(el, video) {
