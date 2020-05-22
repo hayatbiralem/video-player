@@ -28,6 +28,22 @@ const getPlugin = function(name){
   });
 };
 
+
+let HWPConfigIndex = new HtmlWebpackPlugin({
+  filename: "index.html",
+  template: './src/html/index.html',
+  title: 'Video Player',
+  minify: false,
+});
+
+let HWPConfigAuto = new HtmlWebpackPlugin({
+  filename: "autoplay-at-mobile.html",
+  template: './src/html/autoplay-at-mobile.html',
+  title: 'Video Player - Autoplay at Mobile',
+  minify: false,
+});
+
+
 module.exports = {
   mode: mode,
   entry: './src/js/index.js',
@@ -41,11 +57,8 @@ module.exports = {
     getPlugin('demo'),
     getPlugin('youtube-play'),
     getPlugin('vimeo-play'),
-    new HtmlWebpackPlugin({
-      title: 'Video Player',
-      template: './src/html/index.html',
-      minify: false,
-    })
+    HWPConfigIndex,
+    HWPConfigAuto,
   ],
   module: {
     rules: [
