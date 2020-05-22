@@ -10,7 +10,7 @@ Tested on IE11 but it should work IE10+.
 With npm
 
 ```
-npm i video-player -S
+npm i @hayatbiralem/video-player -S
 ```
 
 You can download the latest version or checkout all the releases [here](https://github.com/hayatbiralem/video-player/releases).
