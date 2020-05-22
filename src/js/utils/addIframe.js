@@ -2,11 +2,11 @@ import getIframe from './getIframe';
 
 let map = {
   youtube: {
-    muted: mute,
+    muted: 'mute',
     url: 'https://www.youtube.com/embed/{id}?autoplay=1{params}'
   },
   vimeo: {
-    muted: muted,
+    muted: 'muted',
     url: 'https://player.vimeo.com/video/{id}?autoplay=1{params}'
   }
 };
