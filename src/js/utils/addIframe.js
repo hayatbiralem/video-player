@@ -1,8 +1,14 @@
 import getIframe from './getIframe';
 
 let map = {
-  youtube: 'https://www.youtube.com/embed/{id}?autoplay=1{params}',
-  vimeo: 'https://player.vimeo.com/video/{id}?autoplay=1{params}'
+  youtube: {
+    muted: mute,
+    url: 'https://www.youtube.com/embed/{id}?autoplay=1{params}'
+  },
+  vimeo: {
+    muted: muted,
+    url: 'https://player.vimeo.com/video/{id}?autoplay=1{params}'
+  }
 };
 
 export default function addIframe(el, video) {
@@ -10,7 +16,7 @@ export default function addIframe(el, video) {
     let params = '';
 
     if (video.muted) {
-      params += '&muted=1';
+      params += '&'+map[video.type].muted+'=1';
     }
 
     if (video.mutedAtMobile) {
@@ -20,7 +26,7 @@ export default function addIframe(el, video) {
     }
 
 
-    el.appendChild(getIframe(map[video.type].replace('{id}', video.id).replace('{params}', params)));
+    el.appendChild(getIframe(map[video.type].url.replace('{id}', video.id).replace('{params}', params)));
     el.iframedInnerHTML = el.innerHTML;
   }
 }
