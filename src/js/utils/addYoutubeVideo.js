@@ -2,7 +2,7 @@ export default function addYoutubeVideo(el, videoId, onReady, onComplete, player
   let player = new YT.Player(el, {
     videoId: videoId,
     host: 'https://www.youtube.com',
-    playerVars: { autoplay: 1, modestbranding: 1, rel: 0, showinfo: 0, controls: 1, mute: 1 },
+    playerVars: { autoplay: 1, modestbranding: 1, rel: 0, showinfo: 0, controls: 1, mute: 1, playsinline: 1 },
     events: {
       'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange
