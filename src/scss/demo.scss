@@ -2,8 +2,18 @@
    #DEMO
    ========================================================================== */
 
+$gap: 30px;
+
+html {
+  box-sizing: border-box;
+}
+
+html * {
+  box-sizing: inherit;
+}
+
 body {
-  padding: 30px;
+  padding: $gap;
 }
 
 h1 {
@@ -11,13 +21,22 @@ h1 {
 }
 
 .o-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 30px;
+  display: block;
+  margin-left: -$gap;
+  margin-bottom: -$gap;
+  font-size: 0;
+}
+
+.o-grid__item {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: $gap;
+  padding-left: $gap;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {
-  .o-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .o-grid__item {
+    width: 50%;
   }
 }

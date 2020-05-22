@@ -5,7 +5,8 @@
   "main": "src/js/index.js",
   "scripts": {
     "dev": "npx webpack",
-    "build": "SET NODE_ENV=production& npx webpack"
+    "prod": "SET NODE_ENV=production& npx webpack",
+    "build": "npm run prod"
   },
   "resolutions": {
     "graceful-fs": "4.2.3"
@@ -25,7 +26,7 @@
     "css-loader": "^3.5.3",
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-fetch": "^2.6.0",
+    "old-fashioned-ajax": "^1.0.3",
     "pubsub-js": "^1.8.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",

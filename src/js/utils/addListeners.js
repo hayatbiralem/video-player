@@ -25,7 +25,6 @@ let onPlayed = function (msg, data, el, video) {
   if (data.el !== el) {
     let isActivated = hasClass(el, 'is-activated');
     if (isActivated) {
-      console.log('isActivated', isActivated);
       toggle(el, video);
     }
   }

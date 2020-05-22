@@ -20,7 +20,6 @@ export default function process() {
       let video = resolveVideoUrl(url);
       if(video) {
         window[video.type] = video;
-        console.log(video);
         paintVideo(el, video);
         addListeners(el, video);
       }

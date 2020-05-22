@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import ajax from 'old-fashioned-ajax';
 export default function getVimeoData(id) {
-  return fetch('https://vimeo.com/api/v2/video/'+id+'.json');
+  return ajax('https://vimeo.com/api/v2/video/'+id+'.json');
 }
