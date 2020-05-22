@@ -1,0 +1,37 @@
+/* ==========================================================================
+   #VIMEO_PLAY
+   ========================================================================== */
+
+/**
+ * @source https://github.com/luwes/lite-vimeo-embed/blob/master/src/lite-vimeo-embed.css
+ */
+
+.c-vimeo-play {
+  position: relative;
+  width: 6.5em;
+  height: 4em;
+  background: rgba(23, 35, 34, .75);
+  z-index: 1;
+  opacity: .8;
+  border-radius: .5em;
+  transition: all .2s cubic-bezier(0, 0, .2, 1);
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.c-vimeo-play:before {
+  content: "";
+  border-color: transparent transparent transparent #fff;
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.o-video-player:hover .c-vimeo-play {
+  background-color: #00adef;
+  opacity: 1;
+}

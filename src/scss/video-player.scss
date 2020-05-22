@@ -1,0 +1,61 @@
+/* ==========================================================================
+   #VIDEO_PLAYER
+   ========================================================================== */
+
+/**
+ * Base styles for object.
+ */
+
+.o-video-player {
+  position: relative;
+  display: block;
+}
+
+.o-video-player:not(.is-activated) {
+  cursor: pointer;
+}
+
+.o-video-player:before {
+  content: "";
+  display: block;
+  padding-bottom: 56.25%;
+}
+
+.o-video-player__poster,
+.o-video-player__video {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.o-video-player__poster {
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+.o-video-player__video {
+  z-index: 3;
+}
+
+.o-video-player__play {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+
+  display: inline-block;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* Activated
+   ========================================================================== */
+
+.o-video-player.is-activated .o-video-player__play {
+  display: none;
+}
