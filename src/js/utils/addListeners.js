@@ -1,3 +1,4 @@
+import addClass from './addClass';
 import hasClass from './hasClass';
 import toggleClass from './toggleClass';
 import addIframe from './addIframe';
@@ -8,6 +9,7 @@ let toggle = function (el, video) {
   toggleClass(el, 'is-activated', isActivated);
 
   if (isActivated) {
+    addClass(el, 'is-loading');
     addIframe(el, video);
     PubSub.publish('video-player-played', {el: el, video: video});
   } else {
