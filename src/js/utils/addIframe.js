@@ -17,10 +17,12 @@ let map = {
   }
 };
 
+let useYoutubeAPI = false;
+
 export default function addIframe(el, video) {
   if (map[video.type]) {
 
-    if(video.type === 'youtube') {
+    if(useYoutubeAPI && video.type === 'youtube') {
       loadYoutubeAPI(function(){
         let playerHolder = document.createElement('div');
         playerHolder.setAttribute('class', 'o-video-player__video');
