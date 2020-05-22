@@ -40,3 +40,26 @@ h1 {
     width: 50%;
   }
 }
+
+.c-nav {
+  display: block;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.c-nav__item {
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+
+.c-nav__link {
+  display: block;
+  padding: 5px 15px;
+  color: #000;
+  background-color: #eee;
+  text-decoration: none;
+}
+
